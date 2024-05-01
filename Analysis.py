@@ -2,11 +2,9 @@
 # Author Jennifer Ibanez Cano
 
 # https://archive.ics.uci.edu/dataset/53/iris
+#https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv
 
 import csv
+import pandas as pd
 
-filename = csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
-
-filename = "iris_data.txt"
-
-print(filename)
+df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
