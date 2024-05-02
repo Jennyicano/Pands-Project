@@ -18,3 +18,9 @@ print(df.dtypes)
 # check the number of flowers per species
 
 print(df['species'].value_counts())
+
+Iris_setosa_df = df.loc[df['species'] == 'Iris-setosa', ['petal_length']]
+out = Iris_setosa_df.groupby('petal_length').mean()
+print('Iris_setosa')
+print(out)
+print()
