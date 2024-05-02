@@ -11,5 +11,10 @@ df = pd.read_csv('iris.data.txt')
 # Check the data
 print(df)
 
+# Check the different types of the variables. 
 
+print(df.dtypes)
 
+# check the number of flowers per species
+
+print(df['species'].value_counts())
