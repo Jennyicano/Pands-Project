@@ -19,6 +19,10 @@ print(df.dtypes)
 
 print(df['species'].value_counts())
 
+# Check the petal width mean by specie.
+
+out = df.groupby('species')['petal_width'].mean()
+print(out)
 
 # check the mean of the petal length of each 3 types of flowers. 
 
@@ -39,3 +43,4 @@ out = Iris_versicolor_df.groupby('petal_length').mean()
 print('Iris_versicolor')
 print(out)
 print()
+
