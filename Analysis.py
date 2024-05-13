@@ -62,7 +62,7 @@ print()
 # Check the sepal length mean by specie.
 
 sepal_l = df.groupby('species')['sepal_length'].mean()
-print(petal_l)
+print(sepal_l)
 
 # Histograms of each variale, the histograms will be save to a png files. 
 
@@ -74,4 +74,58 @@ plt.hist(species, bins=5, color='purple', edgecolor='black')
 plt.xlabel('Species')
 plt.ylabel('Quantity')
 plt.title('Iris flowers')
+plt.savefig('Species_hist.png')
 plt.show()
+
+# Plotting the histogram of the petal width. 
+
+petal_w = df['petal_width']
+print(petal_w)
+print()
+
+plt.hist(petal_w, bins=5, color='blue', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Petal width')
+plt.ylabel('')
+plt.title('Petal width of Iris flowers')
+plt.savefig('Petal width_hist.png')
+plt.show()
+
+# Plotting the histogram of the petal length. 
+
+petal_l = df['petal_length']
+print(petal_l)
+print()
+
+plt.hist(petal_l, bins=5, color='green', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Petal Length')
+plt.ylabel('')
+plt.title('Petal length of Iris flowers')
+plt.savefig('Petal length_hist.png')
+plt.show()
+
+# Plotting the histogram of the sepal width.
+
+sepal_w = df['sepal_width']
+print(sepal_w)
+print()
+
+plt.hist(sepal_w, bins=5, color='magenta', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Sepal width')
+plt.ylabel('')
+plt.title('Sepal width of Iris flowers')
+plt.savefig('Sepal width_hist.png')
+plt.show()
+
+# Plotting the histogram of the sepal length. 
+
+sepal_l = df['sepal_length']
+print(sepal_l)
+print()
+
+plt.hist(sepal_l, bins=5, color='orange', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Sepal length')
+plt.ylabel('')
+plt.title('Sepal length of Iris flowers')
+plt.savefig('Sepal length_hist.png')
+plt.show()
+
