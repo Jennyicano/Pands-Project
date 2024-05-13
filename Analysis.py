@@ -15,32 +15,34 @@ print(df)
 
 print(df.dtypes)
 
-# check the number of flowers per species
+# Describe the data set
+
+print(df.describe())
+
+# Output a sumary of each variable to a single text. 
+
+# Check the number of flowers per species. 
 
 print(df['species'].value_counts())
 
+# For the following variables I'm using .groupby and the function mean to have 
+# the numbers in groups of different flowers and the mean of each variable. 
 # Check the petal width mean by specie.
 
-out = df.groupby('species')['petal_width'].mean()
-print(out)
+petal_w = df.groupby('species')['petal_width'].mean()
+print(petal_w)
 
-# check the mean of the petal length of each 3 types of flowers. 
+# Check the petal length mean by specie.
 
-Iris_setosa_df = df.loc[df['species'] == 'Iris-setosa', ['petal_length']]
-out = Iris_setosa_df.groupby('petal_length').mean()
-print('Iris_setosa')
-print(out)
-print()
+petal_l = df.groupby('species')['petal_length'].mean()
+print(petal_l)
 
-Iris_virginica_df = df.loc[df['species'] == 'Iris-virginica', ['petal_length']]
-out = Iris_virginica_df.groupby('petal_length').mean()
-print('Iris_virginica')
-print(out)
-print()
+# Check the sepal width mean by specie.
 
-Iris_versicolor_df = df.loc[df['species'] == 'Iris-versicolor', ['petal_length']]
-out = Iris_versicolor_df.groupby('petal_length').mean()
-print('Iris_versicolor')
-print(out)
-print()
+sepal_w = df.groupby('species')['sepal_width'].mean()
+print(sepal_w)
 
+# Check the sepal length mean by specie.
+
+sepal_l = df.groupby('species')['sepal_length'].mean()
+print(petal_l)
