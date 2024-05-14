@@ -129,3 +129,41 @@ plt.title('Sepal length of Iris flowers')
 plt.savefig('Sepal length_hist.png')
 plt.show()
 
+# Output a scatter plot of each pair of variables. 
+
+# The first scatter plot is with the variables: pental length and pental width. 
+
+# To start I'll get the data of the variables
+species = df['species']
+petal_l = df['petal_length']
+petal_w = df['petal_width']
+
+# I'll asign diferent colors and shapes(using thr formar as markers) for the different species of Iris flowers, 
+# to disting the different between each others
+colors = ['purple', 'yellow', 'blue']
+markers = ['s', 'p', 'D']
+
+# I'm using the markers: 's' as square, 'p' as pentagon, and 'D' as diamond shape.
+
+# Create a scatter plot.
+plt.figure(figsize=(0,150))
+for i in enumerate(species):
+    species_df = df[df['species'] == species]
+    plt.scatter(species_df['petal_length'], species_df['petal_width'], 
+                color=colors, marker=markers, label=species, alpha=0.7)
+
+# Axis labels.
+plt.xlabel('petal_length')
+plt.ylabel('petal_widht')
+
+# Title.
+plt.title('Scatter plot of petal length and petal widht by species', color='purple')
+plt.legend()
+
+# X limits.
+plt.xlim(0, 8)
+
+# Y limits.
+plt.ylim(0, 4)
+
+plt.show()
