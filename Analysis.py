@@ -140,7 +140,7 @@ petal_w = df['petal_width']
 
 # I'll asign diferent colors and shapes(using thr formar as markers) for the different species of Iris flowers, 
 # to disting the different between each others
-colors = ['purple', 'yellow', 'blue']
+colors = ['m', 'y', 'b']
 markers = ['s', 'p', 'D']
 
 # I'm using the markers: 's' as square, 'p' as pentagon, and 'D' as diamond shape.
@@ -149,8 +149,7 @@ markers = ['s', 'p', 'D']
 plt.figure(figsize=(0,150))
 for i in enumerate(species):
     species_df = df[df['species'] == species]
-    plt.scatter(species_df['petal_length'], species_df['petal_width'], 
-                color=colors, marker=markers, label=species, alpha=0.7)
+    plt.scatter(species_df['petal_length'], species_df['petal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
 
 # Axis labels.
 plt.xlabel('petal_length')
