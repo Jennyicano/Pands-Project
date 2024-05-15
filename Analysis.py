@@ -152,8 +152,8 @@ for i, species in enumerate(species):
     plt.scatter(species['petal_length'], species['petal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
 
 # Axis labels.
-plt.xlabel('petal_length')
-plt.ylabel('petal_widht')
+plt.xlabel('Petal length', color='pink')
+plt.ylabel('Petal width', color='pink')
 
 # Title.
 plt.title('Scatter plot of petal length and petal widht by species', color='purple')
@@ -164,5 +164,39 @@ plt.xlim(0, 8)
 # Y limits.
 plt.ylim(0, 3)
 
-plt.savefig('Scatter plot of petal length and petal widht.png')
+plt.savefig('Scatter plot of petal length and petal width.png')
+plt.show()
+
+# The second scatter plot is with the variables: sepal length and sepal width. 
+
+# To start I'll get the data of the variables
+species = df['species'].unique()
+sepal_l = df['sepal_length']
+sepal_w = df['sepal_width']
+
+# I'll asign diferent colors and shapes(using thr formar as markers) for the different species of Iris flowers, 
+# to disting the different between each others
+colors = ['m', 'y', 'b']
+markers = ['v', 's', 'o']
+
+# Create a scatter plot.
+plt.figure(figsize=(10,7))
+for i, species in enumerate(species):
+    species = df[df['species'] == species]
+    plt.scatter(species['sepal_length'], species['sepal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
+
+# Axis labels.
+plt.xlabel('Sepal length', color='blue')
+plt.ylabel('Sepal width', color='blue')
+
+# Title.
+plt.title('Scatter plot of sepal length and sepal widht by species', color='green')
+plt.legend(df['species'].unique())
+
+# X limits.
+plt.xlim(3, 9)
+# Y limits.
+plt.ylim(1, 5)
+
+plt.savefig('Scatter plot of sepal length and sepal width.png')
 plt.show()
