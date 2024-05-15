@@ -10,8 +10,8 @@ import numpy as np
 # For plotting, I'll need to import matplotlib.pyplot.
 import matplotlib.pyplot as plt
 
-# Loaad the data
-df = pd.read_csv('iris.data.txt')
+# Load the data
+df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
 # I'll add 'print()' after every function to leave an empty newline, 
 # suing this when I run the program the terminal will show an empty line 
@@ -134,22 +134,22 @@ plt.show()
 # The first scatter plot is with the variables: pental length and pental width. 
 
 # To start I'll get the data of the variables
-species = df['species']
+species = df['species'].unique()
 petal_l = df['petal_length']
 petal_w = df['petal_width']
 
 # I'll asign diferent colors and shapes(using thr formar as markers) for the different species of Iris flowers, 
 # to disting the different between each others
 colors = ['m', 'y', 'b']
-markers = ['s', 'p', 'D']
+markers = ['p', 's', 'D']
 
 # I'm using the markers: 's' as square, 'p' as pentagon, and 'D' as diamond shape.
 
 # Create a scatter plot.
-plt.figure(figsize=(0,150))
-for i in enumerate(species):
-    species_df = df[df['species'] == species]
-    plt.scatter(species_df['petal_length'], species_df['petal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
+plt.figure(figsize=(10,7))
+for i, species in enumerate(species):
+    species = df[df['species'] == species]
+    plt.scatter(species['petal_length'], species['petal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
 
 # Axis labels.
 plt.xlabel('petal_length')
@@ -157,12 +157,12 @@ plt.ylabel('petal_widht')
 
 # Title.
 plt.title('Scatter plot of petal length and petal widht by species', color='purple')
-plt.legend()
+plt.legend(df['species'].unique())
 
 # X limits.
 plt.xlim(0, 8)
-
 # Y limits.
-plt.ylim(0, 4)
+plt.ylim(0, 3)
 
+plt.savefig('Scatter plot of petal length and petal widht.png')
 plt.show()
