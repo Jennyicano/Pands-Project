@@ -11,10 +11,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the data
-df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
+# df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
+df = pd.read_csv('iris.data.csv')
+
 
 # I'll add 'print()' after every function to leave an empty newline, 
-# suing this when I run the program the terminal will show an empty line 
+# so when I run the program the terminal will show an empty line 
 # to separete the variables text.
 
 # Check the data
@@ -33,19 +35,34 @@ print()
 
 # Output a sumary of each variable to a single text. 
 
-# Check the number of flowers per species. 
+f=open("summary.txt","w")  # I create a text file and will overwrite any existing content.
 
+# Check the number of flowers per species. 
+f.write("Summary of species")
+# I add a newline to the text file I'm writing to
+f.write("\n")
+f.write(df['species'].value_counts().to_string())
+f.write("\n")
+f.write("\n")
+
+#I print it on the terminal also
 print(df['species'].value_counts())
 print()
 
 # For the following variables I'm using .groupby and the function mean to have 
 # the numbers in groups of different flowers and the mean of each variable. 
 
-# Check the petal width mean by specie.
+# Check the petal width mean by species.
 
 petal_w = df.groupby('species')['petal_width'].mean()
 print(petal_w)
 print()
+
+f.write("Petal width mean by species")
+f.write("\n")
+f.write(petal_w.to_string())
+f.write("\n")
+f.write("\n")
 
 # Check the petal length mean by specie.
 
@@ -53,16 +70,37 @@ petal_l = df.groupby('species')['petal_length'].mean()
 print(petal_l)
 print()
 
+f.write("Petal length mean by species")
+f.write("\n")
+f.write(petal_l.to_string())
+f.write("\n")
+f.write("\n")
+
 # Check the sepal width mean by specie.
 
 sepal_w = df.groupby('species')['sepal_width'].mean()
 print(sepal_w)
 print()
 
+f.write("Sepal width mean by species")
+f.write("\n")
+f.write(petal_w.to_string())
+f.write("\n")
+f.write("\n")
+
 # Check the sepal length mean by specie.
 
 sepal_l = df.groupby('species')['sepal_length'].mean()
 print(sepal_l)
+
+f.write("Sepal length mean by species")
+f.write("\n")
+f.write(petal_w.to_string())
+f.write("\n")
+f.write("\n")
+
+# I close the file text.
+f.close()
 
 # Histograms of each variale, the histograms will be save to a png files. 
 
@@ -135,15 +173,16 @@ plt.show()
 
 # To start I'll get the data of the variables
 species = df['species'].unique()
+# unique() gets the unique elements of the array species, in this case the 3 types of Iris flowers.
 petal_l = df['petal_length']
 petal_w = df['petal_width']
 
-# I'll asign diferent colors and shapes(using thr formar as markers) for the different species of Iris flowers, 
-# to disting the different between each others
+# I'll asign diferent colors and shapes(using the format as markers) for the different species of Iris flowers, 
+# to distinguish the differents between each others
 colors = ['m', 'y', 'b']
 markers = ['p', 's', 'D']
 
-# I'm using the markers: 's' as square, 'p' as pentagon, and 'D' as diamond shape.
+# I'm using the markers: 'p' as pentagon, 's' as square, , and 'D' as diamond shape.
 
 # Create a scatter plot.
 plt.figure(figsize=(10,7))
@@ -169,15 +208,17 @@ plt.show()
 
 # The second scatter plot is with the variables: sepal length and sepal width. 
 
-# To start I'll get the data of the variables
-species = df['species'].unique()
+# To start I'll get the data of the variables that I'm using.
+species = df['species'].unique()  
 sepal_l = df['sepal_length']
 sepal_w = df['sepal_width']
 
 # I'll asign diferent colors and shapes(using thr formar as markers) for the different species of Iris flowers, 
-# to disting the different between each others
+# to distinguish the differents between each others
 colors = ['m', 'y', 'b']
 markers = ['v', 's', 'o']
+
+# I'm using the markers: 'v' as triangle, 's' as square, and 'o' as a circle shape.
 
 # Create a scatter plot.
 plt.figure(figsize=(10,7))
