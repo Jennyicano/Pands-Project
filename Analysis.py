@@ -242,5 +242,68 @@ plt.ylim(1, 5)
 plt.savefig('Scatter plot of sepal length and sepal width.png')
 plt.show()
 
+# Create a bar chart to show all the variables of each specie.
+
+species = ("Iris-setosa", "Iris-versicolor", "Iris-virginica")
+variables = {
+    'petal_width': (0.244, 1.326, 2.026),
+    'petal_length': (1.464, 4.260, 5.552),
+    'sepal_width': (3.418, 2.770, 2.974), 
+    'sepal_length': (5.006, 5.936, 6.588)
+}
+# The label locations.
+x = np.arange(len(species)) 
+# The width of the bars 
+width = 0.15  
+multiplier = 0
+
+# To add the different variables of the Iris flowers I created multiple subplots using plt.subplots
+
+fig, ax = plt.subplots(layout='constrained') 
+
+for attribute, measurement in variables.items():
+    offset = width * multiplier
+    rects = ax.bar(x + offset, measurement, width, label=attribute)
+    ax.bar_label(rects, padding=3)
+    multiplier += 1
+    
+# Add some text for labels, title and custom x-axis tick labels, etc.
+
+ax.set_ylabel('Measures (cm)')
+ax.set_title('Iris Data')
+ax.set_xticks(x + width, species)
+ax.legend(loc='upper left', ncols=2)
+ax.set_ylim(0, 7)
+plt.savefig('Bar chart Iris Data')
+plt.show()
+
+
+# Check the correlation between the variables
+
+# I'll generate a correlation matrix with the numeric values to check which variables have the best corrleation between them
+# First I'll remove the non-numeric variables, because the non-numeric vakues are not useful for this analysis. 
+# Then I'll use the function corr()
+df2 = df.drop('species', axis=1)
+
+matrix = df2.corr()
+print(matrix)
+
+# Here is another way to get the correlation coefficient between  variables.
+# I'm using corrcoef() to get the correlation coeficient betweent 2 variables.
+
+petal_l = df['petal_length']
+petal_w = df['petal_width']
+sepal_l = df['sepal_length']
+sepal_w = df['sepal_width']
+
+
+corr = np.corrcoef(petal_l, petal_w)
+print(corr)
+
+corr1 = np.corrcoef(sepal_l, sepal_w)
+print(corr1)
+
+corr2 = np.corrcoef(sepal_l, petal_l)
+print(corr2)
 
 ### End

@@ -22,7 +22,7 @@ Iris-setosa        0.244
 Iris-versicolor    1.326
 Iris-virginica     2.026
 
-Seepal length mean by species
+Sepal length mean by species
 species
 Iris-setosa        0.244
 Iris-versicolor    1.326
