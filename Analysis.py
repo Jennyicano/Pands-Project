@@ -1,7 +1,7 @@
 # Analysis of the Iris data Set. 
 # Author Jennifer Ibanez Cano
 
-# Below you can find the program to analys the Iris data set. 
+# Below you can find the program that perfirm my analysis of the Iris data set. 
 
 # For data frames, I'll need to import pandas.
 import pandas as pd
