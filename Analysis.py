@@ -1,5 +1,7 @@
-# Analysis of the Iris Data Set. 
+# Analysis of the Iris data Set. 
 # Author Jennifer Ibanez Cano
+
+# Below you can find the program to analys the Iris data set. 
 
 # For data frames, I'll need to import pandas.
 import pandas as pd
@@ -10,16 +12,19 @@ import numpy as np
 # For plotting, I'll need to import matplotlib.pyplot.
 import matplotlib.pyplot as plt
 
-# Load the data
+# Seaborn. 
+
+import seaborn as sns 
+
+# Load the data.
 # df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 df = pd.read_csv('iris.data.csv')
 
 
-# I'll add 'print()' after every function to leave an empty newline, 
-# so when I run the program the terminal will show an empty line 
+# I'll add 'print()' after every function to leave an empty newline, so when I run the program the terminal will show an empty line 
 # to separete the variables text.
 
-# Check the data
+# Check the data.
 print(df)
 print()
 
@@ -28,7 +33,7 @@ print()
 print(df.dtypes)
 print()
 
-# Describe the data set
+# Describe the data set.
 
 print(df.describe())
 print()
