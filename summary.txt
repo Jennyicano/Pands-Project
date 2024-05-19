@@ -4,25 +4,25 @@ Iris-setosa        50
 Iris-versicolor    50
 Iris-virginica     50
 
-Petal width mean by species
+Petal width (cm) mean by species
 species
 Iris-setosa        0.244
 Iris-versicolor    1.326
 Iris-virginica     2.026
 
-Petal length mean by species
+Petal length (cm) mean by species
 species
 Iris-setosa        1.464
 Iris-versicolor    4.260
 Iris-virginica     5.552
 
-Sepal width mean by species
+Sepal width (cm) mean by species
 species
 Iris-setosa        0.244
 Iris-versicolor    1.326
 Iris-virginica     2.026
 
-Sepal length mean by species
+Sepal length (cm) mean by species
 species
 Iris-setosa        0.244
 Iris-versicolor    1.326

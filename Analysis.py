@@ -63,7 +63,7 @@ petal_w = df.groupby('species')['petal_width'].mean()
 print(petal_w)
 print()
 
-f.write("Petal width mean by species")
+f.write("Petal width (cm) mean by species")
 f.write("\n")
 f.write(petal_w.to_string())
 f.write("\n")
@@ -75,7 +75,7 @@ petal_l = df.groupby('species')['petal_length'].mean()
 print(petal_l)
 print()
 
-f.write("Petal length mean by species")
+f.write("Petal length (cm) mean by species")
 f.write("\n")
 f.write(petal_l.to_string())
 f.write("\n")
@@ -87,7 +87,7 @@ sepal_w = df.groupby('species')['sepal_width'].mean()
 print(sepal_w)
 print()
 
-f.write("Sepal width mean by species")
+f.write("Sepal width (cm) mean by species")
 f.write("\n")
 f.write(petal_w.to_string())
 f.write("\n")
@@ -98,7 +98,7 @@ f.write("\n")
 sepal_l = df.groupby('species')['sepal_length'].mean()
 print(sepal_l)
 
-f.write("Sepal length mean by species")
+f.write("Sepal length (cm) mean by species")
 f.write("\n")
 f.write(petal_w.to_string())
 f.write("\n")
@@ -140,7 +140,7 @@ print(petal_l)
 print()
 
 plt.hist(petal_l, bins=10, color='green', edgecolor='black', alpha=0.7, rwidth=0.78)
-plt.xlabel('Petal Length (cm)')
+plt.xlabel('Petal length (cm)')
 plt.ylabel('')
 plt.title('Petal length (cm) of Iris flowers')
 plt.savefig('Petal length_hist.png')
@@ -174,7 +174,7 @@ plt.show()
 
 # Output a scatter plot of each pair of variables. 
 
-# The first scatter plot is with the variables: pental length and pental width. 
+# The first scatter plot is with the variables: petal length and petal width. 
 
 # To start I'll get the data of the variables
 species = df['species'].unique()
@@ -285,7 +285,7 @@ plt.show()
 
 # Check the correlation between the variables
 
-# I'll generate a correlation matrix with the numeric values to check which variables have the best corrleation between them
+# I'll generate a correlation matrix with the numeric values to check which variables have the best correlation between them.
 # First I'll remove the non-numeric variables, because the non-numeric vakues are not useful for this analysis. 
 # Then I'll use the function corr()
 df2 = df.drop('species', axis=1)
