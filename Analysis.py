@@ -126,10 +126,10 @@ petal_w = df['petal_width']
 print(petal_w)
 print()
 
-plt.hist(petal_w, bins=5, color='blue', edgecolor='black', alpha=0.7, rwidth=0.78)
-plt.xlabel('Petal width')
+plt.hist(petal_w, bins=10, color='blue', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Petal width (cm)')
 plt.ylabel('')
-plt.title('Petal width of Iris flowers')
+plt.title('Petal width (cm) of Iris flowers')
 plt.savefig('Petal width_hist.png')
 plt.show()
 
@@ -139,10 +139,10 @@ petal_l = df['petal_length']
 print(petal_l)
 print()
 
-plt.hist(petal_l, bins=5, color='green', edgecolor='black', alpha=0.7, rwidth=0.78)
-plt.xlabel('Petal Length')
+plt.hist(petal_l, bins=10, color='green', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Petal Length (cm)')
 plt.ylabel('')
-plt.title('Petal length of Iris flowers')
+plt.title('Petal length (cm) of Iris flowers')
 plt.savefig('Petal length_hist.png')
 plt.show()
 
@@ -152,10 +152,10 @@ sepal_w = df['sepal_width']
 print(sepal_w)
 print()
 
-plt.hist(sepal_w, bins=5, color='magenta', edgecolor='black', alpha=0.7, rwidth=0.78)
-plt.xlabel('Sepal width')
+plt.hist(sepal_w, bins=10, color='magenta', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Sepal width (cm)')
 plt.ylabel('')
-plt.title('Sepal width of Iris flowers')
+plt.title('Sepal width (cm) of Iris flowers')
 plt.savefig('Sepal width_hist.png')
 plt.show()
 
@@ -165,10 +165,10 @@ sepal_l = df['sepal_length']
 print(sepal_l)
 print()
 
-plt.hist(sepal_l, bins=5, color='orange', edgecolor='black', alpha=0.7, rwidth=0.78)
-plt.xlabel('Sepal length')
+plt.hist(sepal_l, bins=10, color='orange', edgecolor='black', alpha=0.7, rwidth=0.78)
+plt.xlabel('Sepal length (cm)')
 plt.ylabel('')
-plt.title('Sepal length of Iris flowers')
+plt.title('Sepal length (cm) of Iris flowers')
 plt.savefig('Sepal length_hist.png')
 plt.show()
 
@@ -196,8 +196,8 @@ for i, species in enumerate(species):
     plt.scatter(species['petal_length'], species['petal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
 
 # Axis labels.
-plt.xlabel('Petal length', color='pink')
-plt.ylabel('Petal width', color='pink')
+plt.xlabel('Petal length (cm)', color='pink')
+plt.ylabel('Petal width (cm)', color='pink')
 
 # Title.
 plt.title('Scatter plot of petal length and petal widht by species', color='purple')
@@ -232,11 +232,11 @@ for i, species in enumerate(species):
     plt.scatter(species['sepal_length'], species['sepal_width'], color= colors[i], marker=markers[i], label=species, alpha=0.7)
 
 # Axis labels.
-plt.xlabel('Sepal length', color='blue')
-plt.ylabel('Sepal width', color='blue')
+plt.xlabel('Sepal length (cm)', color='blue')
+plt.ylabel('Sepal width (cm)', color='blue')
 
 # Title.
-plt.title('Scatter plot of sepal length and sepal widht by species', color='green')
+plt.title('Scatter plot of sepal length and sepal width by species', color='green')
 plt.legend(df['species'].unique())
 
 # X limits.
