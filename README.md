@@ -9,7 +9,7 @@
 
 **About this project**
 
-This repository contain my analysis of the Iris dataset. 
+This repository contains my analysis of the [Iris dataset](https://archive.ics.uci.edu/dataset/53/iris). 
 
 This Iris dataset was introduced by the British statistician and biologist Ronald Fisher in his 1936 article "The use of multiple measurements in taxonomic problems."
 
@@ -58,3 +58,4 @@ The tools that I needed to intall in my computer to complete the module tasks an
 * [matplotlib.pyplot.scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
 * [Matplotlib set the colors](https://matplotlib.org/stable/users/explain/colors/colors.html#colors-def)
 * [Matplotlib markers](https://matplotlib.org/stable/api/markers_api.html)
+* [Creating multiple subplots](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html)

@@ -1,4 +1,4 @@
-# Analysis of the Iris data Set. 
+# Analysis of the Iris dataset. 
 # Author Jennifer Ibanez Cano
 
 # Below you can find the program that perfirm my analysis of the Iris data set. 
