@@ -22,7 +22,7 @@ This project can be usefull to look at the data related with the Iris flowers.
 
 In my [Jupyter notebook](https://github.com/Jennyicano/Pands-Project/blob/main/iris_data.ipynb) I added the comments about the results of my code. In this project the data can be visualized throught plots, histograms, and bar charts. 
 
-In the [Analysis](https://github.com/Jennyicano/Pands-Project/blob/main/Analysis.py) it can be found all the code and programm that will output the information of the Iris dataset. 
+In the [Analysis](https://github.com/Jennyicano/Pands-Project/blob/main/Analysis.py) it can be found all the code and program that will output the information of the Iris dataset. 
 
 Also, the data is summarized in a [text file](https://github.com/Jennyicano/Pands-Project/blob/main/summary.txt) in this repositary.
 
