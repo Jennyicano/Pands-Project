@@ -5,10 +5,15 @@
 
 ## Student of Higher Diploma in Science in Data Analytics at the ATU Galway, 2024. 
 
+![Iris Flower](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimmGMPw0jM_8xjndEHLKj7Hf5fngvWFOJ6_V4jiFb-U0sCHej3aTu08htye1_BgUBGKfnszHoeI_OLLZVf6NjwaG9oDYyOqkjdjeDajd3zg8VuCLVTzDM8hO2XEnarwQeM-CLvFgAwfNX53GR_HPatNPkUH7-7FAoNgFKjw7ujB9LwW5piE8GIPLjJHw/w531-h291/irir_flowers.png)
+
 **About this project**
 
 This repository contain my analysis of the Iris dataset. 
 
+This Iris dataset was introduced by the British statistician and biologist Ronald Fisher in his 1936 article "The use of multiple measurements in taxonomic problems."
+
+The dataset contains 50 samples of each of the 3 species of Iris flower. This 3 type of flowers are: Iris-setosa, Iris-virginica and Iris-versicolor. And the characteristics of this flowers that can be found in the Iris dataset are: petal length, petal width, sepal length and sepal width. 
 
 
 **Use of this project**
@@ -19,7 +24,7 @@ In my [Jupyter notebook](https://github.com/Jennyicano/Pands-Project/blob/main/i
 
 In the [Analysis](https://github.com/Jennyicano/Pands-Project/blob/main/Analysis.py) it can be found all the code and programm that will output the information of the Iris dataset. 
 
-Also, the data can be summarized in a [text file](https://github.com/Jennyicano/Pands-Project/blob/main/summary.txt) in this repositary.
+Also, the data is summarized in a [text file](https://github.com/Jennyicano/Pands-Project/blob/main/summary.txt) in this repositary.
 
 **Contribute**
 
@@ -42,6 +47,14 @@ The tools that I needed to intall in my computer to complete the module tasks an
 
 ## References that I used for this project:
 
-[w3school Matplolib pyplot](https://www.w3schools.com/python/matplotlib_pyplot.asp), 
-
-[w3school NumPy Random](https://www.w3schools.com/python/numpy/numpy_random.asp), also I did a research in Google to check different blogs where people shared similar code. 
+* [Reading CSV Files with Pandas: Real python](https://realpython.com/python-csv/)
+* [Wikipedia Iris flower dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set)
+* [Histograms in Matplotlib](https://www.datacamp.com/tutorial/histograms-matplotlib#:~:text=It%20is%20a%20type%20of,overlapping%20intervals%20of%20a%20variable.)
+* [Save plot and hist in png](https://www.geeksforgeeks.org/how-to-save-a-plot-to-a-file-using-matplotlib/)
+* [w3school Matplolib pyplot](https://www.w3schools.com/python/matplotlib_pyplot.asp), 
+* [Numpy.corrcoef](https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html)
+* [Matplotlib Pyplot](https://www.w3schools.com/python/matplotlib_pyplot.asp)
+* [Matplotlib Pyplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)
+* [matplotlib.pyplot.scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+* [Matplotlib set the colors](https://matplotlib.org/stable/users/explain/colors/colors.html#colors-def)
+* [Matplotlib markers](https://matplotlib.org/stable/api/markers_api.html)
