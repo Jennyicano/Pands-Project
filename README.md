@@ -34,7 +34,7 @@ Anybody is welcome to contribute in this notebook, and also report any issue tha
 
 I'm Jenny, a student of the Higher Diploma in Science in Data Analytics at the ATU Galway. I'm taking the course part time. Also I'm working as an Annotation Analyst at Apple and I'm a new mom.
 
-## Get starting.
+## Getting started.
 
 The tools that I needed to intall in my computer to complete the module tasks and project were the following: 
 
